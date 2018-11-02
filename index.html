@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+ <html>
+<style type = "text/css">
+body{
+	background-image: url("https://ramonriv.github.io/javagame/chalkboard-clip-art-3.jpg"); 
+	height: 576px; 
+	width: 864px;
+    }
+    div {
+  height: 30px;
+  line-height:25px;
+  text-align:top;
+  text-align:center;
+}
+#demo {
+       color: white;
+       padding: 20px;
+       font-size: 40px;
+       text-align:center;
+}
+#leo{
+}
+
+
+
+</style>
+<pre>
+<center><div class="bgimg">
+
+
+
+
+
+<input type=text name=fname> <button onclick="mathanswer()">Submit</button>
+
+
+
+
+
+
+
+
+
+<button onclick="window.location.reload()">Next</button>                                                            <button oncliclick="">Score</button>
+
+</pre>
+  <body>
+
+  <p id="demo"></p>
+   <script>
+var ecuation;
+var num1 = Math.floor(Math.random() * 10);
+var num2 = Math.floor(Math.random() * 10);
+var operador = Math.floor(Math.random() * 3);
+var result;
+
+switch (operador){
+	case 0:
+    	result = num1+num2;
+    	ecuation = num1 +" + "+ num2+ " = " + "?";
+        break;
+	case 1:
+    	result = num1-num2;
+    	ecuation = num1 +" - "+ num2+ " = " + "?";
+        break;
+    case 2:
+    	result = num1*num2;
+    	ecuation = num1 +" x "+ num2+ " = " + "?";
+        break;
+        }
+
+function mathanswer(){
+alert("The correct answer is" + " " + result);
+}
+document.getElementById("demo").innerHTML = ecuation;
+
+
+   </script>
+  </body>
+</html>
